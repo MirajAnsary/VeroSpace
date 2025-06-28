@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VeroSpace Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    />
+      <!-- google lato font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+     <!-- AOS css -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- header section  -->
+    <nav class="navbar" >
+      <div class="navbar-container">
+        <a href="#" class="navbar-logo">
+          <img src="./assets/Group 2.png" alt="navbar-logo" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <ul class="navbar-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#aboutus">About us</a></li>
+          <li><a href="#Properties">Properties</a></li>
+        </ul>
+        <!-- Desktop Buttons -->
+        <div class="navbar-buttons">
+          <a href="#contact" class="btn btn-contact">Contact us</a>
+    <a href="#" class="btn btn-login" id="openLoginModal">LOGIN</a>
+        </div>
+        <!-- Mobile Hamburger Button -->
+        <button class="navbar-toggle" id="navbar-toggle">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+      <!-- Close Button -->
+      <button class="close-btn" id="close-btn">&times;</button>
+
+      <!-- Mobile Navigation -->
+      <ul class="mobile-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#aboutus">About us</a></li>
+        <li><a href="#Properties">Properties</a></li>
+        <!-- mobile-buttons -->
+        <div class="mobile-buttons">
+          <a href="#contact" class="btn btn-contact">Contact us</a>
+    <a href="#" class="btn btn-login" id="openLoginModal">LOGIN</a>
+        </div>
+      </ul>
+    </div>
+
+
+
+              <!-- ------------modals------------------ -->
+
+          <!-- Login Modal -->
+          <div class="modal-overlay" id="loginModal">
+            <div class="modal">
+              <button class="close-modal" id="closeLoginModal">&times;</button>
+              <h2>User Login</h2>
+              <p>Hey, enter your detail to get login<br />to your account</p>
+
+              <form id="loginForm">
+                <div class="form-group">
+                  <input type="text" placeholder="username" required />
+                </div>
+                <div class="form-group">
+                  <input type="password" placeholder="password" required />
+                </div>
+                <div class="forgot-password">
+                  <a href="#" id="forgotPasswordLink">Forgot password?</a>
+                </div>
+                <button type="submit" class="modal-btn">LOGIN</button>
+                <div class="switch-modal">
+                  You don't have an account?
+                  <a href="#" id="switchToRegister">Create an account</a>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Register Modal -->
+          <div class="modal-overlay" id="registerModal">
+            <div class="modal">
+              <button class="close-modal" id="closeRegisterModal">
+                &times;
+              </button>
+              <h2>Create an Account</h2>
+              <p>Fill up details below to get register</p>
+
+              <form id="registerForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <input type="text" placeholder="First name" required />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" placeholder="Last name" required />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <input type="tel" placeholder="Phone" required />
+                  </div>
+                  <div class="form-group">
+                    <input type="email" placeholder="Email" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="password" placeholder="Password" required />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    placeholder="Confirm password"
+                    required
+                  />
+                </div>
+                <div class="terms-text">
+                  By create an account accept our Term & Condition
+                </div>
+                <button type="submit" class="modal-btn">REGISTER</button>
+                <div class="switch-modal">
+                  Already have an account?
+                  <a href="#" id="switchToLogin">Login here</a>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- ---------------------- -->
+
+          <!-- </div> -->
+        </div>
+      </div>
+
+    <!--  =================Banner-section====================  -->
+
+    
+       <section class="banner-section" data-aos="fade-up" data-aos-duration="1000">
+      <div class="fluid-container">
+        <div class="container-wrapper">
+          <div class="banner-content">
+            <h1>
+              Perfect Platform For Buying Or <br />
+              Renting <span class="highlight">Houses, Flats, And Villas</span>
+            </h1>
+            <p class="subtext">
+              Search thousands of homes. Find the one that fits you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <div class="filter-box" data-aos="fade-up" data-aos-duration="1000">
+        <!-- Rent Dropdown -->
+
+        <div class="rent-price">
+          <div class="field">
+            <span> <img src="./assets/dollar-sign 1.png" alt="" /></span>
+            <select>
+              <option>Rent</option>
+              <option>Buy</option>
+            </select>
+          </div>
+          <div class="price-group">
+            <label style="text-align: center">Price Range</label>
+            <div class="field">
+              <span> <img src="./assets/$.png" alt="" /></span>
+              <select>
+                <option>USD</option>
+                <option>INR</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="location-price">
+          <!-- Location Input -->
+          <div class="field" style="flex: 1">
+            <input type="text" placeholder="Your desired location goes here" />
+          </div>
+          <!-- Currency -->
+
+          <!-- Price Section -->
+          <!-- <div class="price-group"> -->
+          <div class="slider-wrapper">
+            <span class="price-label">$5,000</span>
+            <div class="slider">
+         <input type="range" min="5000" max="15000" value="5000" id="priceRange" />            </div>
+            <span class="price-label">$15,000</span>
+          </div>
+        </div>
+        
+
+
+        <!-- House Type -->
+        <div class="house-rent">
+          <div class="field">
+            <span> <img src="./assets/Frame.png" alt="" /> </span>
+            <select>
+              <option>House</option>
+              <option>Flat</option>
+            </select>
+          </div>
+
+          <!-- Rooms -->
+          <div class="field">
+            <span><img src="./assets/ic_round-meeting-room.png" alt="" /></span>
+            <select>
+              <option>2 Rooms</option>
+              <option>3 Rooms</option>
+              <option>4 Rooms</option>
+            </select>
+          </div>
+        </div>
+        <div class="vertical-line"></div>
+        <!-- Search Button -->
+        <button class="search-btn">SEARCH</button>
+      </div>
+
+    <!-- ==========================================================================
+    Apartment Section
+    ========================================================================== -->
+
+    <section class="apartment-types"  data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-duration="1000">
+      <div class="container">
+        <h2>Explore Apartment Types</h2>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="icon-box">
+                <img src="./assets/apartmant/Group 13.png" alt="Commercial" />
+              </div>
+              <h4>Commercial</h4>
+              <p>6 Properties</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="icon-box">
+                <img src="./assets/apartmant/Group 14.png" alt="Residential" />
+              </div>
+              <h4>Residential</h4>
+              <p>6 Properties</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="icon-box">
+                <img src="./assets/apartmant/Group 15.png" alt="Villa" />
+              </div>
+              <h4>Villa</h4>
+              <p>6 Properties</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="icon-box">
+                <img src="./assets/apartmant/Group 16.png" alt="Apartment" />
+              </div>
+              <h4>Apartment</h4>
+              <p>6 Properties</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="icon-box">
+                <img src="./assets/apartmant/Group 17.png" alt="Warehouse" />
+              </div>
+              <h4>Warehouse</h4>
+              <p>6 Properties</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>               
+
+
+
+             <!-- /* ==========================================================================
+                                        About US Section
+   ========================================================================== */ -->
+         <section class="about-section" data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="1000">
+      <div class="container">
+        <div class="row">
+          <!-- Image Column -->
+          <div class="col-50">
+            
+            <div class="images2nd">
+              <img
+                src="./assets/about-img.png"
+                
+                alt="Overlay House Image"
+              />
+            </div>
+          </div>
+
+      <div class=" col-50 content-section ">
+        <div class="section-label">About Us</div>
+
+        <h1 class="main-heading">
+          Welcome To VeroSpace, Your Trusted Real Estate Expert.
+        </h1>
+
+        <p class="description">
+          We believe real estate is more than transactions—it's about people,
+          relationships, and the moments that turn a house into a home. That's
+          why we're here to support you like a trusted friend, every step of the
+          way.
+        </p>
+
+        <div class="metrics">
+          <div class="metric-item">
+  <span class="metric-icon">
+    <img src="./assets/fa-solid_smile.png" alt="">
+  </span>
+  <span class="metric-number stats-number" data-target="15000">0</span>
+  <span class="metric-label">Trusted Customer</span>
+</div>
+
+<div class="metric-item">
+  <span class="metric-icon">
+    <img src="./assets/gridicons_house.png" alt="">
+  </span>
+  <span class="metric-number stats-number" data-target="20000">0</span>
+  <span class="metric-label">Houses Sold</span>
+</div>
+
+<div class="metric-item">
+  <span class="metric-icon">
+    <img src="./assets/fluent_agents-28-filled.png" alt="">
+  </span>
+  <span class="metric-number stats-number" data-target="75000">0</span>
+  <span class="metric-label">Property Listed</span>
+</div>
+
+        </div>
+      </div>
+    </div>
+    </scetion>
+
+
+           <!-- /* ==========================================================================
+                                        Apartment Section
+   ========================================================================== */ -->
+         <section class="property-listing" data-aos="fade-up" data-aos-duration="1000">
+      <div class="fluid-container">
+        <div class="section-header">
+          <div class="header-content">
+            <h3>Recently Added</h3>
+            <h2>Explore Our Newly Listed Properties</h2>
+          </div>
+          <button class="all-listing-btn">All Listing</button>
+        </div>
+
+        <div class="swiper propertySwiper">
+          <div class="swiper-wrapper">
+            <!-- Property Slides -->
+            <!-- Slide-1 -->
+
+            <div class="swiper-slide">
+              <div class="swiper-card one">
+                <div class="card-content">
+                  <div class="property-info">
+                    <div class="title">Sobha Heartland <br/> Villa</div>
+                    <div class="rating">
+                      <img
+                        src="./assets/material-symbols_star.png"
+                        alt="Rating"
+                      />
+                      4.8
+                    </div>
+                  </div>
+                  <div class="property-actions">
+                    <div class="location">
+                      <img
+                        src="./assets/fluent_location-16-filled.png"
+                        alt="Location"
+                      />
+                      <span>Berlin, Germany</span>
+                    </div>
+                    <button class="details-btn">Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slide -2 -->
+            <div class="swiper-slide">
+              <div class="swiper-card two">
+                <div class="card-content">
+                  <div class="property-info">
+                    <div class="title">Hillside Haven
+                      <br/> Villa
+                    </div>
+                    <div class="rating">
+                      <img
+                        src="./assets/material-symbols_star.png"
+                        alt="Rating"
+                      />
+                      4.8
+                    </div>
+                  </div>
+                  <div class="property-actions">
+                    <div class="location">
+                      <img
+                        src="./assets/fluent_location-16-filled.png"
+                        alt="Location"
+                      />
+                      <span>Genoa, Italy </span>
+                    </div>
+                    <button class="details-btn">Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide -3 -->
+            <div class="swiper-slide">
+              <div class="swiper-card three">
+                <div class="card-content">
+                  <div class="property-info">
+                    <div class="title">Island Paradise 
+                     <br/> Villa</div>
+                    <div class="rating">
+                      <img
+                        src="./assets/material-symbols_star.png"
+                        alt="Rating"
+                      />
+                      4.8
+                    </div>
+                  </div>
+                  <div class="property-actions">
+                    <div class="location">
+                      <img
+                        src="./assets/fluent_location-16-filled.png"
+                        alt="Location"
+                      />
+                      <span>Paris, France</span>
+                    </div>
+                    <button class="details-btn">Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slide-4 -->
+            <div class="swiper-slide">
+              <div class="swiper-card four">
+                <div class="card-content">
+                  <div class="property-info">
+                    <div class="title">Emerald Coast
+                      <br/> Manor</div>
+                    <div class="rating">
+                      <img
+                        src="./assets/./material-symbols_star.png"
+                        alt="Rating"
+                      />
+                      4.8
+                    </div>
+                  </div>
+                  <div class="property-actions">
+                    <div class="location">
+                      <img
+                        src="./assets/fluent_location-16-filled.png"
+                        alt="Location"
+                      />
+                      <span>Lyon, France</span>
+                    </div>
+                    <button class="details-btn">Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slide-5 -->
+            <div class="swiper-slide">
+              <div class="swiper-card one">
+                <div class="card-content">
+                  <div class="property-info">
+                    <div class="title">Sobha Heartland 
+                     <br/> Villa</div>
+                    <div class="rating">
+                      <img
+                        src="./assets/material-symbols_star.png"
+                        alt="Rating"
+                      />
+                      4.8
+                    </div>
+                  </div>
+                  <div class="property-actions">
+                    <div class="location">
+                      <img
+                        src="./assets/fluent_location-16-filled.png"
+                        alt="Location"
+                      />
+                      <span>Berlin, Germany</span>
+                    </div>
+                    <button class="details-btn">Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card two">
+                <div class="card-content">
+                  <div class="property-info">
+                    <div class="title">Hillside Haven
+                      <br/> Villa
+                    </div>
+                    <div class="rating">
+                      <img
+                        src="./assets/material-symbols_star.png"
+                        alt="Rating"
+                      />
+                      4.8
+                    </div>
+                  </div>
+                  <div class="property-actions">
+                    <div class="location">
+                      <img
+                        src="./assets/fluent_location-16-filled.png"
+                        alt="Location"
+                      />
+                      <span>Genoa, Italy </span>
+                    </div>
+                    <button class="details-btn">Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+        <!-- =====service-section======== -->
+
+  <section class="service-section">
+      <div class="service-container">
+        <div class="row">
+          <!-- Left Side - Text Content -->
+          <div class="col6">
+            <div class="service-text">
+              <p class="label">Other Service</p>
+              <h2>We Make Sell Or Rent Your Property Simple and Profitable.</h2>
+              <p class="subtext">
+                We are the most respected Realestate company in the industry. We
+                deliver extraordinary facility to the customer.
+              </p>
+              <p class="subtext">
+                Lorem ipsum dolor sit amet consectetur. Et aliquet sed nibh
+                porttitor lacus. Sodales maecenas aliquam dis neque posuere
+                urna.
+              </p>
+              <button class="submit-btn">Submit Property</button>
+            </div>
+          </div>
+
+          
+          <div class="col-6 other-service-right">
+            <img src="./assets/home-other-service-img.png" alt="" />
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+          <!-- ======testimonial-section===== -->
+
+     <section class="testimonial-section" data-aos="fade-up" data-aos-duration="1000">
+      <div class="testimonial-header">
+        <p>Testimonials</p>
+        <h2>What Our Customer Says</h2>
+      </div>
+
+      <div class="swiper testimonialSwiper">
+        <div class="swiper-wrapper">
+          <!-- Testimonial Slides -->
+          <div class="swiper-slide testimonial-slide">
+            <div class="testimonial-card card-third">
+              <div class="white-box">
+                <p>
+                  Lorem ipsum dolor sit amet consec. Mauris a vitae commodo
+                  neque viverra elementum quam turpis morbi. suspendisse orci
+                  tristique leo sit eu nunc.
+                </p>
+                <hr />
+                <div class="testimonial-profile">
+                  <img
+                    src="./assets/Ellipse 6.png"
+                    alt="William Jones"
+                  />
+                  <div>
+                    <h4>William Jones</h4>
+                    <div class="stars">★ ★ ★ ★ ★ ☆</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonial-slide">
+            <div class="testimonial-card card-first">
+              <div class="white-box">
+                <p>
+                  Lorem ipsum dolor sit amet consec. Mauris a vitae commodo
+                  neque viverra elementum quam turpis morbi. suspendisse orci
+                  tristique leo sit eu nunc.
+                </p>
+                <hr />
+                <div class="testimonial-profile">
+                  <img
+                    src="./assets/Ellipse 6 (1).png"
+                    alt="William Jones"
+                  />
+                  <div>
+                    <h4>William Jones</h4>
+                    <div class="stars">★ ★ ★ ★ ★ ☆</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonial-slide">
+            <div class="testimonial-card card-second">
+              <div class="white-box">
+                <p>
+                  Lorem ipsum dolor sit amet consec. Mauris a vitae commodo
+                  neque viverra elementum quam turpis morbi. suspendisse orci
+                  tristique leo sit eu nunc.
+                </p>
+                <hr />
+                <div class="testimonial-profile">
+                  <img
+                    src="./assets/Ellipse 6.png"
+                    alt="William Jones"
+                  />
+                  <div>
+                    <h4>William Jones</h4>
+                    <div class="stars">★ ★ ★ ★ ★ ☆</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Trusted Companies Section -->
+    <section class="trusted-companies" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <h2 class="trusted-heading">Trusted by 200+ Companies</h2>
+
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Company Logos -->
+            <div class="swiper-slide">
+              <div class="logo-placeholder">
+                <img src="./assets/image 187.png" alt="Company Logo" />
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="logo-placeholder">
+                <img src="./assets/image 189.png" alt="Company Logo" />
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="logo-placeholder">
+                <img src="./assets/image 190.png" alt="Company Logo" />
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="logo-placeholder">
+                <img src="./assets/image 191.png" alt="Company Logo" />
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="logo-placeholder">
+                <img src="./assets/image 192.png" alt="Company Logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!-- Newsletter Section -->
+    <section class="newsletter-section" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <div class="row">
+          <div class="col55">
+            <div class="news-title">
+              <h2 class="newsletter-title">Newsletter To Get Updated</h2>
+              <h2 class="newsletter-title">The Latest News</h2>
+            </div>
+          </div>
+
+          <div class="col66">
+            <form class="newsletter-form">
+              <input
+                type="email"
+                class="newsletter-input"
+                placeholder="Enter your email address"
+                required
+              />
+              <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====footer-section=== -->
+     <footer class="footer" data-aos="fade-up" data-aos-duration="1000"> 
+    <!-- Column 1 -->
+    <div class="footer-column">
+        <div class="footer-logo">
+          <a href="">
+            <img src="./assets/Group 2.png" alt="Logo" />
+          </a>
+        </div>
+        <p class="footer-description">
+          Lorem ipsum dolor sit amet consectetur. Pharetra ornare aliquet nunc
+          dui in scelerporttitor. Proin ullamcorper.
+        </p>
+        <div class="social-images">
+          <a href="#"> <img src="./assets/Group 57.png" alt="fb" /></a>
+          <a href="#"> <img src="./assets/Group 58.png" alt="x" /></a>
+          <a href="#"> <img src="./assets/Group 59.png" alt="ig" /></a>
+          <a href="#"> <img src="./assets/Group 60.png" alt="yt" /></a>
+        </div>
+      </div>
+
+    <!-- Column 2 -->
+    <div class="footer-column footer-links">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Properties</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+    <!-- Column 3 -->
+    <div class="footer-column">
+        <div class="footer-gallery">
+          <img src="./assets/Rectangle 48.png" alt="thumb1" />
+          <img src="./assets/Rectangle 49.png" alt="thumb2" />
+          <img src="./assets/Rectangle 50.png" alt="thumb3" />
+          <img src="./assets/Rectangle 51.png" alt="thumb4" />
+          <img src="./assets/Rectangle 52.png" alt="thumb5" />
+          <img src="./assets/Rectangle 53.png" alt="thumb6" />
+          <img src="./assets/Rectangle 54.png" alt="thumb7" />
+          <img src="./assets/Rectangle 55.png" alt="thumb8" />
+        </div>
+      </div>
+    </footer>
+
+      <!-- Footer Bottom -->
+    <footer class="second-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="copyright">
+            Copyright ©2024 VeroSpace, All rights reserved
+          </div>
+          <div class="second-footer-links">
+            <div class="services"><a href="#">Terms of Service</a></div>
+            <div class="policy"><a href="#">Privacy Policy</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="./counting.js"></script>
+     <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+
+    // Get DOM elements
+    const navbarToggle = document.getElementById("navbar-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeBtn = document.getElementById("close-btn");
+    const body = document.body;
+    const mobileNavLinks = document.querySelectorAll(".mobile-nav a");
+
+    // Function to open mobile menu
+    function openMobileMenu() {
+      mobileMenu.classList.add("active");
+      body.classList.add("menu-open");
+    }
+
+    // Function to close mobile menu
+    function closeMobileMenu() {
+      mobileMenu.classList.remove("active");
+      body.classList.remove("menu-open");
+    }
+
+    // Event listeners
+    navbarToggle.addEventListener("click", openMobileMenu);
+    closeBtn.addEventListener("click", closeMobileMenu);
+
+    // Close menu when clicking on mobile nav links
+    mobileNavLinks.forEach((link) => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    // Close menu when clicking outside (optional)
+    mobileMenu.addEventListener("click", (e) => {
+      if (e.target === mobileMenu) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close menu on escape key press
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
+        closeMobileMenu();
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    });
+
+
+    //  property section
+    // Initialize Property Swiper
+    const swiper = new Swiper(".propertySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        425: { slidesPerView: 1, spaceBetween: 15 },
+        768: { slidesPerView: 2, spaceBetween: 20 },
+        1024: { slidesPerView: 4, spaceBetween: 20 },
+        1440: { slidesPerView: 4, spaceBetween: 30 },
+      },
+    });
+
+    // Property Details Button Event
+    document.querySelectorAll(".details-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const title = btn
+          .closest(".property-card")
+          .querySelector(".property-title").textContent;
+        alert(`Viewing details for: ${title}`);
+      });
+    });
+
+    // All Listing Button Event
+    document.querySelector(".all-listing-btn").addEventListener("click", () => {
+      alert("Redirecting to all listings page...");
+    });
+
+
+    // <!-- ======testimonial-section===== -->
+    document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".swiper-container", {
+          slidesPerView: "auto",
+          spaceBetween: 15,
+          centeredSlides: false,
+          speed: 6000,
+          autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+          },
+          loop: true,
+          allowTouchMove: false,
+          breakpoints: {
+            640: { spaceBetween: 20 },
+            1024: { spaceBetween: 25 },
+          },
+        });
+      });
+
+      // Initialize Testimonial Swiper
+      const testimonialSwiper = new Swiper(
+        ".testimonial-section .testimonialSwiper",
+        {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          loop: true,
+          centeredSlides: false,
+          pagination: {
+            el: ".testimonial-section .swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".testimonial-section .swiper-button-next",
+            prevEl: ".testimonial-section .swiper-button-prev",
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 50,
+              centeredSlides: false,
+            },
+          },
+        }
+      );
+     
+      
+AOS.init({
+        once: true, // animation only once on scroll
+        offset: 100, // offset trigger
+      });
+  </script>
+</html>
