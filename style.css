@@ -38,7 +38,7 @@ body {
 .fluid-container {
   max-width: 1570px;
   margin: 0 auto;
-  padding: 0 15px;
+  /* padding: 0 15px; */
   width: 100%;
 }
 
@@ -51,7 +51,7 @@ body {
 
 .navbar {
   padding: 1rem 0;
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -64,6 +64,7 @@ body {
 
 .navbar-container {
   min-height: 79px;
+  max-width: 1260px;
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
@@ -414,14 +415,14 @@ body {
   height: 662px;
   background: url(./assets/blending-futuristic-building-seamlessly-into-desert-landscape.png)
     no-repeat center/cover;
-  background-position: center top 20px; /* 👈 Moves image 20px down */
+  /* background-position: center top 20px; */
   /* height: 100vh; */
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   position: relative;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -1260,80 +1261,81 @@ body {
 }
 
 /* <!-- Trusted Companies Section --> */
-
-.trusted-companies {
-  padding: 40px 0px;
-  background-color: #f8f9fa;
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
+.company {
+  padding-top: 84px;
 }
-
-.trusted-heading {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 30px;
+.company > div > div {
+  flex-direction: column;
+}
+.company-head {
+  font-size: 20px;
   font-weight: 600;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+}
+.company-rotate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 39px;
+  /* gap: 20px; */
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    animation: none;
+  }
+
+  .carousel-track {
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .logo-group:last-child {
+    display: none;
+  }
 }
 
-.trusted-companies .swiper-container {
-  width: 100%;
+/* Focus states for accessibility */
+.logo-item:focus-within {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.logo-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.carousel-container {
   overflow: hidden;
-}
-
-.trusted-companies .swiper-wrapper {
-  transition-timing-function: linear !important;
-  align-items: center;
-}
-
-.trusted-companies .swiper-slide {
+  width: 100%;
+  position: relative;
   /* background: white; */
-  border-radius: 6px;
-  padding: 15px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  height: auto;
-  width: 180px !important;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); */
+  padding: 2rem 0;
+}
+
+.carousel-track {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  width: calc(200% + 40px);
+  animation: scroll 20s linear infinite;
 }
 
-.company-category {
-  font-size: 10px;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 5px;
+.carousel-track:hover {
+  animation-play-state: paused;
 }
-
-.company-name {
-  font-size: 14px;
-  font-weight: 600;
-  color: #222;
-  margin-top: 8px;
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-
-.logo-placeholder {
-  width: 60px;
-  height: 30px;
-  background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #999;
-  font-size: 8px;
-  margin: 5px 0;
-}
-
-.properties-content {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  align-items: center;
-}
-
 /* <!-- Newsletter Section --> */
 .newsletter-section {
   padding-block: 75px;
@@ -1902,7 +1904,7 @@ body.menu-open {
 
   .metrics {
     /* flex-direction: column; */
-    align-items: center;
+    /* align-items: center; */
     gap: 20px;
   }
 
@@ -2257,7 +2259,7 @@ body.menu-open {
     justify-content: center;
   }
 }
-@media (max-width: 340px) {
+@media (max-width: 360px) {
   .testimonial-section .testimonial-header h2 {
     font-size: 24px;
   }
