@@ -1439,6 +1439,11 @@ header > div > div > div {
     padding: 10px 20px;
   }
 }
+@media screen and (max-width: 320px) {
+  .hero-section > h1 {
+    padding-top: 190px;
+  }
+}
 /* ------------------------------------------------ */
 @media screen and (max-width: 320px) {
   .section-header {
