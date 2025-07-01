@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>verospace-property-page</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="./propites.css" />
+    <!-- fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- google lato font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css"
+    />
+    <!-- AOS css -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <!-- ------------------------ -->
+  </head>
+  <body>
+    <header>
+
+          <nav class="navbar">
+      <div class="navbar-container">
+        <a href="#" class="navbar-logo">
+          <img src="../assets/Group 2.png" alt="navbar-logo" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <ul class="navbar-nav">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about us.html">About us</a></li>
+          <li><a href="./propites.html">Properties</a></li>
+        </ul>
+        <!-- Desktop Buttons -->
+        <div class="navbar-buttons">
+          <a href="./Contact Us.html" class="btn btn-contact">Contact us</a>
+          <a href="" class="btn btn-login" id="openLoginModal">LOGIN</a>
+        </div>
+        <!-- Mobile Hamburger Button -->
+        <button class="navbar-toggle" id="navbar-toggle">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+      <!-- Close Button -->
+      <button class="close-btn" id="close-btn">&times;</button>
+
+      <!-- Mobile Navigation -->
+      <ul class="mobile-nav">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about us.html">About us</a></li>
+        <li><a href="./propites.html">Properties</a></li>
+        <!-- mobile-buttons -->
+        <div class="mobile-buttons">
+          <a href="./Contact Us.html" class="btn btn-contact">Contact us</a>
+          <a href="#login" class="btn btn-login" id="openLoginModal">LOGIN</a>
+        </div>
+      </ul>
+    </div>
+
+          <!-- ------------modals------------------ -->
+
+          <!-- Login Modal -->
+          <div class="modal-overlay" id="loginModal">
+            <div class="modal">
+              <button class="close-modal" id="closeLoginModal">&times;</button>
+              <h2>User Login</h2>
+              <p>Hey, enter your detail to get login<br />to your account</p>
+
+              <form id="loginForm">
+                <div class="form-groupss">
+                  <input type="text" placeholder="username" required />
+                </div>
+                <div class="form-groupss">
+                  <input type="password" placeholder="password" required />
+                </div>
+                <div class="forgot-password">
+                  <a href="#" id="forgotPasswordLink">Forgot password?</a>
+                </div>
+                <button type="submit" class="modal-btn">LOGIN</button>
+                <div class="switch-modal">
+                  You don't have an account?
+                  <a href="#" id="switchToRegister">Create an account</a>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Register Modal -->
+          <div class="modal-overlay" id="registerModal">
+            <div class="modal">
+              <button class="close-modal" id="closeRegisterModal">
+                &times;
+              </button>
+              <h2>Create an Account</h2>
+              <p>Fill up details below to get register</p>
+
+              <form id="registerForm">
+                <div class="form-rowss">
+                  <div class="form-groupss">
+                    <input type="text" placeholder="First name" required />
+                  </div>
+                  <div class="form-groupss">
+                    <input type="text" placeholder="Last name" required />
+                  </div>
+                </div>
+                <div class="form-rowss">
+                  <div class="form-groupss">
+                    <input type="tel" placeholder="Phone" required />
+                  </div>
+                  <div class="form-groupss">
+                    <input type="email" placeholder="Email" required />
+                  </div>
+                </div>
+                <div class="form-groupss">
+                  <input type="password" placeholder="Password" required />
+                </div>
+                <div class="form-groupss">
+                  <input
+                    type="password"
+                    placeholder="Confirm password"
+                    required
+                  />
+                </div>
+                <div class="terms-text">
+                  By create an account accept our Term & Condition
+                </div>
+                <button type="submit" class="modal-btn">REGISTER</button>
+                <div class="switch-modal">
+                  Already have an account?
+                  <a href="#" id="switchToLogin">Login here</a>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- ---------------------- -->
+
+          <!-- </div> -->
+        </div>
+      </div>
+      <div class="hero-section" data-aos="fade-up" data-aos-duration="1000">
+        <h1>properties</h1>
+        <div class="hero-arrow">
+          <a href="./index.html" style="color: white">Home</a>
+          <img src="./assets/mdi_arrow-right-thin.png" alt="" />
+          <a href="./property.html" style="color: white">Properties</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- <div class="floating-range-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col2 rent">
+            <div class="form-group rent-select">
+              <select>
+                <option>🏠 Rent</option>
+                <option>🏠 Buy</option>
+                <option>🏠 Lease</option>
+              </select>
+            </div>
+            <div>Price Range</div>
+            <div class="form-group USD-select">
+              <select>
+                <option>🏠 Rent</option>
+                <option>🏠 Buy</option>
+                <option>🏠 Lease</option>
+              </select>
+            </div>
+          </div>
+          <div class="col4 range">
+            <div class="form-group location-input">
+              <input
+                type="text"
+                placeholder="Your desired location goes here"
+              />
+            </div>
+            <div class="price-range">
+              <div class="range-slider">
+                <div class="range-track"></div>
+                <div class="range-thumb left"></div>
+                <div class="range-thumb right"></div>
+              </div>
+            </div>
+            <div class="price-values">
+              <div class="price-value">$ 5,000</div>
+              <div class="price-value">$ 15,000</div>
+            </div>
+          </div>
+          <div class="col3 house">
+            <div class="form-group house-select">
+              <select>
+                <option>🏠 House</option>
+                <option>🏢 Apartment</option>
+                <option>🏘️ Condo</option>
+              </select>
+            </div>
+            <div class="form-group rooms-select">
+              <select>
+                <option>🛏️ 2 Rooms</option>
+                <option>🛏️ 1 Room</option>
+                <option>🛏️ 3 Rooms</option>
+                <option>🛏️ 4+ Rooms</option>
+              </select>
+            </div>
+          </div>
+          <div class="search">search</div>
+        </div>
+      </div>
+    </div> -->
+     <section class="cards-section">
+      <div class="filter-box" data-aos="fade-up" data-aos-duration="1000">
+        <!-- Rent Dropdown -->
+        <div class="rent-price">
+          <div class="field">
+            <span> <img src="./assets/dollar-sign 1.png" alt="" /></span>
+            <select>
+              <option>Rent</option>
+              <option>Buy</option>
+            </select>
+          </div>
+          <div class="price-group">
+            <label style="text-align: center">Price Range</label>
+            <div class="field">
+              <span> <img src="./assets/$.png" alt="" /></span>
+              <select>
+                <option>USD</option>
+                <option>INR</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="location-price">
+          <!-- Location Input -->
+          <div class="field" style="flex: 1">
+            <input type="text" placeholder="Your desired location goes here" />
+          </div>
+
+          <!-- New Dual Range Slider -->
+          <div class="slider-wrapper">
+            <div class="price-range">
+              <div class="range-slider">
+                <div class="range-track"></div>
+                <div class="range-thumb left" data-value="5000"></div>
+                <div class="range-thumb right" data-value="15000"></div>
+              </div>
+            </div>
+            <div class="price-values">
+              <div class="price-value" id="minPrice">$ 5,000</div>
+              <div class="price-value" id="maxPrice">$ 15,000</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- House Type -->
+        <div class="house-rent">
+          <div class="field">
+            <span> <img src="./assets/Frame.png" alt="" /> </span>
+            <select>
+              <option>House</option>
+              <option>Flat</option>
+            </select>
+          </div>
+          <!-- Rooms -->
+          <div class="field">
+            <span><img src="./assets/ic_round-meeting-room.png" alt="" /></span>
+            <select>
+              <option>2 Rooms</option>
+              <option>3 Rooms</option>
+              <option>4 Rooms</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="vertical-line"></div>
+        <!-- Search Button -->
+        <button class="search-btn">SEARCH</button>
+      </div>
+    </section>
+
+
+    <!-- ------------property-about-detail-info------------------------------- -->
+
+    <section class="property-about-detail-info">
+      <div class="container">
+        <div class="row">
+          <aside class="property-sidebar">
+            <form id="propertyFilterForm">
+              <div class="property-filter-group">
+                <label for="propertyCountry" class="property-filter-label"
+                  >Country</label
+                >
+                <div class="property-select-wrapper">
+                  <select id="propertyCountry" class="property-select" required>
+                    <option value="">Select Country</option>
+                    <option value="india">India</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                  </select>
+                </div>
+                <div class="property-error-message" id="countryError">
+                  Please select a country
+                </div>
+              </div>
+
+              <div class="property-filter-group">
+                <label for="propertyCity" class="property-filter-label"
+                  >City</label
+                >
+                <div class="property-select-wrapper">
+                  <select id="propertyCity" class="property-select" required>
+                    <option value="">Select City</option>
+                    <option value="gurgaon">Gurgaon</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                  </select>
+                </div>
+                <div class="property-error-message" id="cityError">
+                  Please select a city
+                </div>
+              </div>
+
+              <div class="property-filter-group">
+                <label for="propertyCategory" class="property-filter-label"
+                  >Property Category</label
+                >
+                <div class="property-select-wrapper">
+                  <select
+                    id="propertyCategory"
+                    class="property-select"
+                    required
+                  >
+                    <option value="">Select Category</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="villa">Villa</option>
+                    <option value="house">House</option>
+                  </select>
+                </div>
+                <div class="property-error-message" id="categoryError">
+                  Please select a property category
+                </div>
+              </div>
+
+              <div class="property-filter-group">
+                <label class="property-filter-label">Amenities</label>
+                <ul class="property-amenities-list">
+                  <li class="property-amenity-item">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="amenities"
+                        value="supermarket"
+                      />
+                      Near Super Market
+                    </label>
+                    <span class="property-amenity-count">3002</span>
+                  </li>
+                  <li class="property-amenity-item">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="amenities"
+                        value="hospital"
+                      />
+                      Near Hospital
+                    </label>
+                    <span class="property-amenity-count">530</span>
+                  </li>
+                  <li class="property-amenity-item">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="amenities"
+                        value="internet"
+                      />
+                      Internet
+                    </label>
+                    <span class="property-amenity-count">4561</span>
+                  </li>
+                  <li class="property-amenity-item">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="amenities"
+                        value="kidzones"
+                      />
+                      Kid Zones
+                    </label>
+                    <span class="property-amenity-count">564</span>
+                  </li>
+                  <li class="property-amenity-item">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="amenities"
+                        value="supermarket2"
+                      />
+                      Near Super Market
+                    </label>
+                    <span class="property-amenity-count">364</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="property-filter-group">
+                <label class="property-filter-label">Number of Bedroom's</label>
+                <div class="property-bedroom-options">
+                  <input
+                    type="checkbox"
+                    id="propertyRoom1"
+                    class="property-bedroom-option"
+                    name="bedrooms"
+                    value="1"
+                  />
+                  <label for="propertyRoom1" class="property-bedroom-label"
+                    >Room 1</label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="propertyRoom2"
+                    class="property-bedroom-option"
+                    name="bedrooms"
+                    value="2"
+                  />
+                  <label for="propertyRoom2" class="property-bedroom-label"
+                    >Room 2</label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="propertyRoom3"
+                    class="property-bedroom-option"
+                    name="bedrooms"
+                    value="3"
+                  />
+                  <label for="propertyRoom3" class="property-bedroom-label"
+                    >Room 3</label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="propertyRoom5"
+                    class="property-bedroom-option"
+                    name="bedrooms"
+                    value="5"
+                  />
+                  <label for="propertyRoom5" class="property-bedroom-label"
+                    >Room 5</label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="propertyRoom6"
+                    class="property-bedroom-option"
+                    name="bedrooms"
+                    value="6"
+                  />
+                  <label for="propertyRoom6" class="property-bedroom-label"
+                    >Room 6</label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="propertyRoom7"
+                    class="property-bedroom-option"
+                    name="bedrooms"
+                    value="7"
+                  />
+                  <label for="propertyRoom7" class="property-bedroom-label"
+                    >Room 7</label
+                  >
+                </div>
+              </div>
+
+              <div class="property-filter-group">
+                <label class="property-filter-label">Square Feet</label>
+                <div class="property-range-slider">
+                  <input
+                    type="range"
+                    min="400"
+                    max="2000"
+                    value="400"
+                    class="property-range-input"
+                    id="squareFeetRange"
+                  />
+                  <div class="property-range-values">
+                    <span class="property-range-value" id="minSquareFeet"
+                      >400 sqft</span
+                    >
+                    <span class="property-range-value" id="maxSquareFeet"
+                      >2000 sqft</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="property-filter-group">
+                <label class="property-filter-label">Price Range</label>
+                <div class="property-range-slider">
+                  <input
+                    type="range"
+                    min="1000"
+                    max="50000"
+                    value="1000"
+                    class="property-range-input"
+                    id="priceRange"
+                  />
+                  <div class="property-range-values">
+                    <span class="property-range-value" id="minPrice"
+                      >$1,000</span
+                    >
+                    <span class="property-range-value" id="maxPrice"
+                      >$50,000</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="property-apply-btn">APPLY</button>
+            </form>
+          </aside>
+
+          <!-- Main Content -->
+          <main class="property-main-content">
+            <div class="property-listings-grid">
+              <!-- Property 1 -->
+              <div class="property-listing-card">
+                <div class="property-card-image">
+                  <img
+                    src="./assets/Rectangle 29.png"
+                    alt="Sobha Heartland Villa"
+                  />
+                  <div class="property-card-badge">For Rent</div>
+                </div>
+                <div class="property-card-info">
+                  <div class="property-card-type">Villa</div>
+                  <h3 class="property-card-title">Sobha Heartland Villa</h3>
+                  <p class="property-card-description">
+                    Lorem ipsum dolor sit amet consectetur. Mattis sit venenatis
+                    ornare egestas nunc. Et interdum pulvinar semper.
+                  </p>
+                  <div class="property-card-location">Berlin, Germany</div>
+                  <div class="property-card-rating">
+                    <span class="property-rating-stars">★★★★★</span>
+                    <span class="property-rating-score">5.0</span>
+                  </div>
+                  <div class="property-card-features">
+                    <div class="property-feature">
+                      <img
+                        src="./assets/lucide_bed-double.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>4 Bed</span>
+                    </div>
+                    <div class="property-feature">
+                      <img
+                        src="./assets/lucide_bath.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>3 Bath</span>
+                    </div>
+                    <div class="property-feature">
+                      <img
+                        src="./assets/bx_area.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>1500 sqft</span>
+                    </div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-card-price">$1,299.00</div>
+                    <a class="property-detail-btn" href="./Property Detail.html"
+                      >DETAIL</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Property 2 -->
+              <div class="property-listing-card2">
+                <div class="property-card-image">
+                  <img src="./assets/Rectangle 30.png" alt="Hillside Haven" />
+                  <div class="property-card-badge">For Rent</div>
+                </div>
+                <div class="property-card-info">
+                  <div class="property-card-type">Apartment</div>
+                  <h3 class="property-card-title">Hillside Haven</h3>
+                  <p class="property-card-description">
+                    Lorem ipsum dolor sit amet consectetur. Mattis sit venenatis
+                    ornare egestas nunc. Et interdum pulvinar semper.
+                  </p>
+                  <div class="property-card-location">Genoa, Italy</div>
+                  <div class="property-card-rating">
+                    <span class="property-rating-stars">★★★★★</span>
+                    <span class="property-rating-score">5.0</span>
+                  </div>
+                  <div class="property-card-features">
+                    <div class="property-feature">
+                      <img
+                        src="./assets/lucide_bed-double.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>3 Bed</span>
+                    </div>
+                    <div class="property-feature">
+                      <img
+                        src="./assets/lucide_bath.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>2 Bath</span>
+                    </div>
+                    <div class="property-feature">
+                      <img
+                        src="./assets/bx_area.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>900 sqft</span>
+                    </div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-card-price">$1,099.00</div>
+                    <a class="property-detail-btn" href="./Property Detail.html"
+                      >DETAIL</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Property 3 -->
+              <div class="property-listing-card">
+                <div class="property-card-image">
+                  <img
+                    src="./assets/Rectangle 31.png"
+                    alt="Island Paradise Villa"
+                  />
+                  <div class="property-card-badge">For Sale</div>
+                </div>
+                <div class="property-card-info">
+                  <div class="property-card-type">Villa</div>
+                  <h3 class="property-card-title">Island Paradise Villa</h3>
+                  <p class="property-card-description">
+                    Lorem ipsum dolor sit amet consectetur. Mattis sit venenatis
+                    ornare egestas nunc. Et interdum pulvinar semper.
+                  </p>
+                  <div class="property-card-location">Paris, France</div>
+                  <div class="property-card-rating">
+                    <span class="property-rating-stars">★★★★★</span>
+                    <span class="property-rating-score">5.0</span>
+                  </div>
+                  <div class="property-card-features">
+                    <div class="property-feature">
+                      <img
+                        src="./img/property-detail-images/beds.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>4 Bed</span>
+                    </div>
+                    <div class="property-feature">
+                      <img
+                        src="./assets/lucide_bath.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>3 Bath</span>
+                    </div>
+                    <div class="property-feature">
+                      <img
+                        src="./assets/bx_area.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>1500 sqft</span>
+                    </div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-card-price">$25,000.00</div>
+                    <a class="property-detail-btn" href="./Property Detail.html"
+                      >DETAIL</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- property 4 -->
+              <div class="property-listing-card2">
+                <div class="property-card-image">
+                  <img src="./assets/Rectangle 32.png" alt="Hillside Haven" />
+                  <div class="property-card-badge">For Rent</div>
+                </div>
+                <div class="property-card-info">
+                  <div class="property-card-type">Apartment</div>
+                  <h3 class="property-card-title">Emerald Coast Manor</h3>
+                  <p class="property-card-description">
+                    Lorem ipsum dolor sit amet consectetur. Mattis sit venenatis
+                    ornare egestas nunc. Et interdum pulvinar semper.
+                  </p>
+                  <div class="property-card-location">Lyon, France</div>
+                  <div class="property-card-rating">
+                    <span class="property-rating-stars">★★★★★</span>
+                    <span class="property-rating-score">5.0</span>
+                  </div>
+                  <div class="property-card-features">
+                    <div class="property-feature">
+                      <img
+                        src="./assets/lucide_bed-double.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>3 Bed</span>
+                    </div>
+                    <div class="property-feature">
+                      <img
+                        src="./assets/lucide_bath.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>2 Bath</span>
+                    </div>
+                    <div class="property-feature">
+                      <img
+                        src="./assets/bx_area.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>900 sqft</span>
+                    </div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-card-price">$19,000.00</div>
+                    <a class="property-detail-btn" href="./Property Detail.html"
+                      >DETAIL</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Property 5 -->
+              <div class="property-listing-card">
+                <div class="property-card-image">
+                  <img
+                    src="./assets/Rectangle 29 (2).png"
+                    alt="Island Paradise Villa"
+                  />
+                  <div class="property-card-badge">For Sale</div>
+                </div>
+                <div class="property-card-info">
+                  <div class="property-card-type">Villa</div>
+                  <h3 class="property-card-title">Crystal Cottage</h3>
+                  <p class="property-card-description">
+                    Lorem ipsum dolor sit amet consectetur. Mattis sit venenatis
+                    ornare egestas nunc. Et interdum pulvinar semper.
+                  </p>
+                  <div class="property-card-location">Frankfurt, Germany</div>
+                  <div class="property-card-rating">
+                    <span class="property-rating-stars">★★★★★</span>
+                    <span class="property-rating-score">5.0</span>
+                  </div>
+                  <div class="property-card-features">
+                    <div class="property-feature">
+                      <img
+                        src="./assets/lucide_bed-double.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>5 Bed</span>
+                    </div>
+                    <div class="property-feature">
+                      <img
+                        src="./assets/lucide_bath.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>4 Bath</span>
+                    </div>
+                    <div class="property-feature">
+                      <img
+                        src="./assets/bx_area.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>1800 sqft</span>
+                    </div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-card-price">$30,000.00</div>
+                    <a class="property-detail-btn" href="./Property Detail.html"
+                      >DETAIL</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Property 6 -->
+              <div class="property-listing-card2">
+                <div class="property-card-image">
+                  <img
+                    src="./assets/Rectangle 76 (2).png"
+                    alt="Hillside Haven"
+                  />
+                  <div class="property-card-badge">For Rent</div>
+                </div>
+                <div class="property-card-info">
+                  <div class="property-card-type">Apartment</div>
+                  <h3 class="property-card-title">Little Acom</h3>
+                  <p class="property-card-description">
+                    Lorem ipsum dolor sit amet consectetur. Mattis sit venenatis
+                    ornare egestas nunc. Et interdum pulvinar semper.
+                  </p>
+                  <div class="property-card-location">Berlin, Germany</div>
+                  <div class="property-card-rating">
+                    <span class="property-rating-stars">★★★★★</span>
+                    <span class="property-rating-score">5.0</span>
+                  </div>
+                  <div class="property-card-features">
+                    <div class="property-feature">
+                      <img
+                        src="./assets/lucide_bed-double.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>3 Bed</span>
+                    </div>
+                    <div class="property-feature">
+                      <img
+                        src="./assets/lucide_bath.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>2 Bath</span>
+                    </div>
+                    <div class="property-feature">
+                      <img
+                        src="./assets/bx_area.png"
+                        class="property-feature-icon"
+                        alt=""
+                      />
+                      <span>1000 sqft</span>
+                    </div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-card-price">$1,099.00</div>
+                    <a class="property-detail-btn" href="./Property Detail.html"
+                      >DETAIL</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------Newsletter---------------------------------------- -->
+
+    <section class="newsletter-section" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <div class="row">
+          <div class="col55">
+            <div class="news-title">
+              <h2 class="newsletter-title">Newsletter To Get Updated</h2>
+              <h2 class="newsletter-title">The Latest News</h2>
+            </div>
+          </div>
+
+          <div class="col66">
+            <form class="newsletter-form">
+              <input
+                type="email"
+                class="newsletter-input"
+                placeholder="Enter your email address"
+                required
+              />
+              <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- ------------------------------footer---------------------------- -->
+
+    <section class="footer" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <div class="row">
+          <div class="footer-content">
+            <div class="footer-logo">
+              <img src="./img/home-images/logo.png" alt="" />
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Pharetra ornare aliquet
+              nunc dui in scelerporttitor. Proin ullamcorper.
+            </p>
+            <div class="footer-social-link">
+              <img src="./img/home-images/fb.png" alt="" />
+              <img src="./img/home-images/twtr.png" alt="" />
+              <img src="./img/home-images/insta.png" alt="" />
+              <img src="./img/home-images/utube.png" alt="" />
+            </div>
+          </div>
+          <div class="footer-link">
+            <h3>Useful Links</h3>
+            <div class="links">
+              <p><a href="./index.html">Home</a></p>
+              <p><a href="./about us.html">About Us</a></p>
+              <p><a href="./propites.html">Properties</a></p>
+              <p><a href="./Contact Us.html">Contact Us</a></p>
+            </div>
+          </div>
+          <div class="footer-property">
+            <h3>Our Properties</h3>
+            <div class="row1">
+              <img src="./assets/Rectangle 48.png" alt="" />
+              <img src="./assets/Rectangle 49.png" alt="" />
+              <img src="./assets/Rectangle 50.png" alt="" />
+              <img src="./assets/Rectangle 51.png" alt="" />
+            </div>
+            <div class="row2">
+              <img src="./assets/Rectangle 52.png" alt="" />
+              <img src="./assets/Rectangle 53.png" alt="" />
+              <img src="./assets/Rectangle 54.png" alt="" />
+              <img src="./assets/Rectangle 55.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+
+    <!-- --------------------------------copyright---------------------------- -->
+
+    <section class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="copy-left">
+            <p>Copyright &copy;2024 VeroSpace, All rights reserved</p>
+          </div>
+          <div class="copy-right">
+            <span>Term of Service</span>
+            <span>Privacy Policy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------script----------------------------- -->
+
+    <script src="./JS/hamberger.js"></script>
+    <script src="./JS/range-slider.js"></script>
+    <script src="./JS/property-about-detail-info-script.js"></script>
+    <script src="./ranges.js"></script>
+    <script src="./script.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true, // animation only once on scroll
+        offset: 100, // offset trigger
+      });
+       // Get references to the menu elements
+    const navbarToggle = document.getElementById("navbar-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeBtn = document.getElementById("close-btn");
+    const body = document.body;
+
+    // Function to open the mobile menu
+    function openMobileMenu() {
+      // Add active class to hamburger for spin animation
+      navbarToggle.classList.add("active");
+      // Show mobile menu
+      mobileMenu.classList.add("active");
+      // Prevent body scrolling
+      body.classList.add("menu-open");
+    }
+
+    // Function to close the mobile menu
+    function closeMobileMenu() {
+      // Remove active class from hamburger to reverse spin animation
+      navbarToggle.classList.remove("active");
+      // Hide mobile menu
+      mobileMenu.classList.remove("active");
+      // Allow body scrolling
+      body.classList.remove("menu-open");
+    }
+
+    // Event listener for hamburger button click
+    navbarToggle.addEventListener("click", () => {
+      // Check if menu is currently open
+      if (mobileMenu.classList.contains("active")) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+
+    // Event listener for close button click
+    closeBtn.addEventListener("click", closeMobileMenu);
+
+    // Close menu when clicking on a navigation link (optional)
+    const mobileNavLinks = document.querySelectorAll(".mobile-nav a");
+    mobileNavLinks.forEach((link) => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    // Close menu when clicking outside the menu content (optional)
+    mobileMenu.addEventListener("click", (e) => {
+      if (e.target === mobileMenu) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close menu when pressing Escape key (optional)
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
+        closeMobileMenu();
+      }
+    });
+
+    // Add smooth hover effect to hamburger button
+    navbarToggle.addEventListener("mouseenter", () => {
+      if (!navbarToggle.classList.contains("active")) {
+        navbarToggle.style.transform = "scale(1.1)";
+      }
+    });
+
+    navbarToggle.addEventListener("mouseleave", () => {
+      if (!navbarToggle.classList.contains("active")) {
+        navbarToggle.style.transform = "scale(1)";
+      }
+    });
+    </script>
+  </body>
+</html>

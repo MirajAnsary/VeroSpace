@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>verospace_contactuspage</title>
+    <title>verospace_submit-property-page</title>
     <!-- css link -->
-    <link rel="stylesheet" href="./Contact Us.css" />
+    <link rel="stylesheet" href="./Submit Property.css" />
     <!-- fontawesome link -->
     <link
       rel="stylesheet"
@@ -43,8 +43,7 @@
   </head>
   <body>
     <header>
-     
-    <nav class="navbar" >
+     <nav class="navbar" >
       <div class="navbar-container">
         <a href="#" class="navbar-logo">
           <img src="./assets/Group 2.png" alt="navbar-logo" />
@@ -81,7 +80,7 @@
       <ul class="mobile-nav">
         <li><a href="./index.html">Home</a></li>
         <li><a href="./about us.html">About us</a></li>
-        <li><a href="./propites.html">Properties</a></li>
+        <li><a href="#Properties">Properties</a></li>
         <!-- mobile-buttons -->
         <div class="mobile-buttons">
           <a href="./Contact Us.html" class="btn btn-contact">Contact us</a>
@@ -172,315 +171,344 @@
           <!-- </div> -->
         </div>
       </div>
-      <div class="hero-section" data-aos="fade-up" data-aos-duration="1000">
-        <h1>contact us</h1>
+      <div
+        class="hero-section"
+        data-aos="zoom-in-up"
+        data-aos-delay="300"
+        data-aos-duration="1200"
+      >
+        <h1>properties</h1>
         <div class="hero-arrow">
           <a href="./index.html" style="color: white">Home</a>
           <img src="./assets/mdi_arrow-right-thin.png" alt="" />
-          <a href="./contactus.html" style="color: white">Contact Us</a>
+          <a href="./submit-property.html" style="color: white"
+            >Submit Property</a
+          >
         </div>
       </div>
     </header>
 
-    <!-- -------------------------getintouch------------------------- -->
+    <!-- -----------------submit-property-basic-info---------------------- -->
 
-    <section class="get-in-touch" data-aos="fade-up" data-aos-duration="1000">
+    <section class="basic-info">
       <div class="container">
-        <div class="row">
+        <div class="form-wrapper">
+          <!-- Left Section -->
           <div
-            class="col4 get-in-touch-left"
+            class="left-section"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <div class="dash-about">
-              <span></span>
-              <p>Get In Touch</p>
-            </div>
-            <h2>How We Can Help You?</h2>
-            <p style="color: #666666">
-              Lorem ipsum dolor sit amet consectetur. Turpis faucibus nulla
-              vestibulum dolor. Dictum.
-            </p>
-            <div class="get-line"></div>
+            <h2 class="section-title">Basic Information</h2>
 
-            <div class="get-address">
-              <div class="get-address-img">
-                <img src="./assets/Group 132.png" alt="" />
-              </div>
-              <div class="get-address-content">
-                <div>Our Address</div>
-                <p>2690 Hiltona Street Victoria <br />Road, New York, Canada</p>
-              </div>
+            <div class="form-group" data-aos="fade-up" data-aos-duration="800">
+              <input
+                type="text"
+                class="input-field"
+                placeholder="Property Title"
+              />
             </div>
 
-            <div class="get-ph">
-              <div class="get-ph-img">
-                <img src="./assets/Group 133.png" alt="" />
+            <div
+              class="form-row"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="800"
+            >
+              <select class="select-field">
+                <option>Type</option>
+                <option>House</option>
+                <option>Apartment</option>
+                <option>Condo</option>
+                <option>Villa</option>
+              </select>
+              <select class="select-field">
+                <option>Status</option>
+                <option>For Sale</option>
+                <option>For Rent</option>
+                <option>Sold</option>
+              </select>
+              <select class="select-field">
+                <option>Price</option>
+                <option>$100k - $200k</option>
+                <option>$200k - $500k</option>
+                <option>$500k - $1M</option>
+                <option>$1M+</option>
+              </select>
+            </div>
+
+            <div class="location-section">
+              <h3 class="section-title">Location</h3>
+
+              <div
+                class="form-row"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="800"
+              >
+                <select class="select-field">
+                  <option>Country</option>
+                  <option>United States</option>
+                  <option>Canada</option>
+                  <option>United Kingdom</option>
+                  <option>Australia</option>
+                </select>
+                <select class="select-field">
+                  <option>City</option>
+                  <option>New York</option>
+                  <option>Los Angeles</option>
+                  <option>Chicago</option>
+                  <option>Houston</option>
+                </select>
+                <input type="text" class="input-field" placeholder="Zip" />
               </div>
-              <div class="get-ph-content">
-                <div>Phone Number</div>
-                <p>+01 09 256 2569</p>
+
+              <div
+                class="form-group"
+                data-aos="fade-up"
+                data-aos-duration="800"
+              >
+                <input type="text" class="input-field" placeholder="Address" />
               </div>
             </div>
 
-            <div class="get-email">
-              <div class="get-email-img">
-                <img src="./assets/Group 134.png" alt="" />
-              </div>
-              <div class="get-email-content">
-                <div>Email Address</div>
-                <p>support24@verospace.com</p>
+            <div
+              class="gallery-section"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              <h3 class="section-title">Gallery</h3>
+              <div
+                class="file-upload"
+                onclick="document.getElementById('fileInput').click()"
+              >
+                <div class="file-upload-icon">
+                  <svg fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="file-upload-text">
+                  Choose a file or Drag it here
+                </div>
+                <input
+                  type="file"
+                  id="fileInput"
+                  style="display: none"
+                  multiple
+                  accept="image/*"
+                />
               </div>
             </div>
           </div>
+
+          <!-- Right Section -->
           <div
-            class="col8 get-in-touch-right"
+            class="right-section"
             data-aos="fade-left"
             data-aos-duration="1000"
+            data-aos-delay="200"
           >
-            <div class="form-container">
-              <div id="successMessage" class="success-message">
-                Thank you! Your message has been sent successfully.
-              </div>
-              <div id="errorMessage" class="error-message">
-                Please fill in all required fields.
-              </div>
+            <h2 class="section-title">Contact Details</h2>
 
-              <form id="contactForm">
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      placeholder="First Name"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      placeholder="Last name"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      placeholder="Phone Number"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="Email Address"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group full-width">
-                    <label for="message">Message</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      placeholder="Message"
-                      required
-                    ></textarea>
-                  </div>
-                </div>
-
-                <button type="submit" class="submit-btn">Submit</button>
-              </form>
+            <div class="contact-inputs">
+              <input type="text" class="input-field" placeholder="Your Name" />
+              <input type="email" class="input-field" placeholder="Email" />
+              <input
+                type="tel"
+                class="input-field"
+                placeholder="Phone Number"
+              />
             </div>
+
+            <div class="detail-section">
+              <h3 class="detail-title">Detail information</h3>
+
+              <div class="detail-row">
+                <select class="select-field">
+                  <option>Bedrooms</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4+</option>
+                </select>
+                <select class="select-field">
+                  <option>Bathrooms</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4+</option>
+                </select>
+                <input
+                  type="text"
+                  class="input-field"
+                  placeholder="Area, Sq Ft"
+                />
+              </div>
+
+              <div class="checkbox-grid">
+                <div class="checkbox-item">
+                  <div class="checkbox">
+                    <input type="checkbox" id="parking" />
+                    <div class="checkmark"></div>
+                  </div>
+                  <label for="parking" class="checkbox-label"
+                    >Parking Lot</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <div class="checkbox">
+                    <input type="checkbox" id="balcony" />
+                    <div class="checkmark"></div>
+                  </div>
+                  <label for="balcony" class="checkbox-label">Balcony</label>
+                </div>
+                <div class="checkbox-item">
+                  <div class="checkbox">
+                    <input type="checkbox" id="lawn" />
+                    <div class="checkmark"></div>
+                  </div>
+                  <label for="lawn" class="checkbox-label">Lawn</label>
+                </div>
+                <div class="checkbox-item">
+                  <div class="checkbox">
+                    <input type="checkbox" id="wifi" />
+                    <div class="checkmark"></div>
+                  </div>
+                  <label for="wifi" class="checkbox-label">Wi-Fi</label>
+                </div>
+                <div class="checkbox-item">
+                  <div class="checkbox">
+                    <input type="checkbox" id="ocean" />
+                    <div class="checkmark"></div>
+                  </div>
+                  <label for="ocean" class="checkbox-label">Ocean View</label>
+                </div>
+                <div class="checkbox-item">
+                  <div class="checkbox">
+                    <input type="checkbox" id="fireplace" />
+                    <div class="checkmark"></div>
+                  </div>
+                  <label for="fireplace" class="checkbox-label"
+                    >Fireplace</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <div class="checkbox">
+                    <input type="checkbox" id="gym" />
+                    <div class="checkmark"></div>
+                  </div>
+                  <label for="gym" class="checkbox-label">Gym</label>
+                </div>
+                <div class="checkbox-item">
+                  <div class="checkbox">
+                    <input type="checkbox" id="hospital" />
+                    <div class="checkmark"></div>
+                  </div>
+                  <label for="hospital" class="checkbox-label"
+                    >Near Hospital</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <div class="checkbox">
+                    <input type="checkbox" id="laundry" />
+                    <div class="checkmark"></div>
+                  </div>
+                  <label for="laundry" class="checkbox-label">Laundry</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" data-aos="fade-up" data-aos-duration="800">
+              <textarea
+                class="textarea-field"
+                placeholder="Comment (Optional)"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" onclick="submitForm()">
+              Submit Property
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ---------------------------FAQ----------------------- -->
-    <section class="FAQ" data-aos="fade-up" data-aos-duration="1000">
+    <!-- --------------------------------------how-it-work-------------- -->
+    <section class="how-it-work">
       <div class="container">
-        <div class="row">
-          <div class="faq-container">
-            <div
-              class="faq-header"
-              data-aos="fade-down"
-              data-aos-duration="800"
-            >
-              <div class="faq-about">
-                <span></span>
-                <p>FAQ</p>
-              </div>
-              <h1 class="faq-title">We're Here To Help You</h1>
+        <div class="dash-about">
+          <span></span>
+          <p>Get In Touch</p>
+        </div>
+        <h2>How to Sell Or Rent Your Property</h2>
+        <div class="progress-container">
+          <!-- Connect with Client Section -->
+          <div
+            class="connect-section"
+            style="width: 100vh"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <div class="connect-icon">
+              <img src="./assets/Group 188.png" alt="" />
             </div>
+            <div class="connect-title">Connect<br />With Client</div>
+            <div class="connect-description">
+              Lorem ipsum dolor sit<br />amet consectetur
+            </div>
+          </div>
 
-            <div class="faq-list">
-              <div class="faq-item" data-aos="fade-up" data-aos-duration="800">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                  <span class="faq-question-text"
-                    >What services does your real estate agency provide?</span
-                  >
-                  <svg
-                    class="faq-icon"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="faq-answer">
-                  <p class="faq-answer-text">
-                    Lorem ipsum dolor sit amet consectetur. Et eget massa sed
-                    gravida velit in nibh. Tortor sed quis arcu risus
-                    sollicitudin lacus donec in commodo. <br /><br />
-                    Lorem ipsum dolor sit amet consectetur. Et eget massa sed
-                    gravida velit in nibh.
-                  </p>
+          <!-- Progress Steps -->
+          <div class="progress-wrapper">
+            <div class="progress-line"></div>
+            <div class="progress-steps">
+              <div
+                class="step"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+                data-aos-duration="800"
+              >
+                <div class="step-circle">1</div>
+                <div class="step-content" style="width: 100vh">
+                  <div class="step-icon">
+                    <img src="./assets/Group 188 (1).png" alt="" />
+                  </div>
+                  <div class="step-title">Post Your Property</div>
+                  <div class="step-description">
+                    Lorem ipsum dolor sit amet consectetur
+                  </div>
                 </div>
               </div>
 
-              <div class="faq-item" data-aos="fade-up" data-aos-duration="1000">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                  <span class="faq-question-text"
-                    >How do I get started with buying or selling a
-                    property?</span
-                  >
-                  <svg
-                    class="faq-icon"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="faq-answer active">
-                  <p class="faq-answer-text">
-                    Lorem ipsum dolor sit amet consectetur. Et eget massa sed
-                    gravida velit in nibh. Tortor sed quis arcu risus
-                    sollicitudin lacus donec in commodo. <br /><br />
-                    Lorem ipsum dolor sit amet consectetur. Et eget massa sed
-                    gravida velit in nibh.
-                  </p>
-                </div>
+              <div
+                class="step"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+                data-aos-duration="800"
+              >
+                <div class="step-circle">2</div>
               </div>
 
-              <div class="faq-item" data-aos="fade-up" data-aos-duration="1200">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                  <span class="faq-question-text"
-                    >Are your agents licensed and experienced?</span
-                  >
-                  <svg
-                    class="faq-icon"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="faq-answer">
-                  <p class="faq-answer-text">
-                    Lorem ipsum dolor sit amet consectetur. Et eget massa sed
-                    gravida velit in nibh. Tortor sed quis arcu risus
-                    sollicitudin lacus donec in commodo. <br /><br />
-                    Lorem ipsum dolor sit amet consectetur. Et eget massa sed
-                    gravida velit in nibh.
-                  </p>
-                </div>
-              </div>
-
-              <div class="faq-item" data-aos="fade-up" data-aos-duration="1400">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                  <span class="faq-question-text"
-                    >Do I need to make repairs or renovations before
-                    selling?</span
-                  >
-                  <svg
-                    class="faq-icon"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="faq-answer">
-                  <p class="faq-answer-text">
-                    Lorem ipsum dolor sit amet consectetur. Et eget massa sed
-                    gravida velit in nibh. Tortor sed quis arcu risus
-                    sollicitudin lacus donec in commodo. <br /><br />
-                    Lorem ipsum dolor sit amet consectetur. Et eget massa sed
-                    gravida velit in nibh.
-                  </p>
-                </div>
-              </div>
-
-              <div class="faq-item" data-aos="fade-up" data-aos-duration="1600">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                  <span class="faq-question-text"
-                    >Do you offer help with relocation or moving services?</span
-                  >
-                  <svg
-                    class="faq-icon"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="faq-answer">
-                  <p class="faq-answer-text">
-                    Lorem ipsum dolor sit amet consectetur. Et eget massa sed
-                    gravida velit in nibh. Tortor sed quis arcu risus
-                    sollicitudin lacus donec in commodo. <br /><br />
-
-                    Lorem ipsum dolor sit amet consectetur. Et eget massa sed
-                    gravida velit in nibh.
-                  </p>
+              <div
+                class="step"
+                data-aos="zoom-in"
+                data-aos-delay="400"
+                data-aos-duration="800"
+              >
+                <div class="step-circle">3</div>
+                <div class="step-content" style="width: 100vh">
+                  <div class="step-icon">
+                    <img src="./assets/Group 188 (3).png" alt="" />
+                  </div>
+                  <div class="step-title">Close The Deal</div>
+                  <div class="step-description">
+                    Lorem ipsum dolor sit amet consectetur
+                  </div>
                 </div>
               </div>
             </div>
@@ -491,46 +519,6 @@
 
     <!-- --------------------Newsletter---------------------------------------- -->
 
-    <!-- <section class="newsletter" data-aos="fade-up" data-aos-duration="1000">
-      <div class="container">
-        <div class="row">
-          <div
-            class="col6 news-left"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-          >
-            <h3>Newsletter To Get Updated The Latest News</h3>
-          </div>
-          <div
-            class="col6 news-right"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-          >
-            <div class="email">
-              <div class="form-container1" id="formContainer1">
-                <form id="emailForm" novalidate>
-                  <div class="email-input-wrapper">
-                    <input
-                      type="email"
-                      id="emailInput"
-                      class="email-input"
-                      placeholder="Enter Your Email"
-                      autocomplete="email"
-                      style="border: 2px solid #333333"
-                      required
-                    />
-                    <div class="error-message1" id="errorMessage1"></div>
-                    <div class="success-message1" id="successMessage1"></div>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="login subscribe">Subscribe</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <hr /> -->
     <section
       class="newsletter-section"
       data-aos="fade-up"
@@ -559,6 +547,7 @@
         </div>
       </div>
     </section>
+    <hr />
 
     <!-- ------------------------------footer---------------------------- -->
 
@@ -619,13 +608,13 @@
 
     <!------------------------------copyright---------------------------- -->
 
-    <section class="copyright" data-aos="fade-up" data-aos-duration="1000">
+    <section class="copyright">
       <div class="container">
         <div class="row">
-          <div class="copy-left" data-aos="fade-right" data-aos-duration="800">
+          <div class="copy-left">
             <p>Copyright &copy;2024 VeroSpace, All rights reserved</p>
           </div>
-          <div class="copy-right" data-aos="fade-left" data-aos-duration="800">
+          <div class="copy-right">
             <span>Term of Service</span>
             <span>Privacy Policy</span>
           </div>
@@ -633,11 +622,12 @@
       </div>
     </section>
 
-    <!-- ---------------------------------------script-------------- -->
-    <script src="./Contact us/form.js"></script>
-    <script src="./Contact us/FAQ-toggle.js"></script>
-    <scrip src="./Contact us/error.js"></script>
-    <script src="./script.js"></script>
+    <!-- -------------------------------script----------------------- -->
+
+    <script src="./JS/get-info-form-properties.js"></script>
+
+    <!-- --newsletter form-- -->
+    <script src="./JS/form-error.js"></script>
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -701,8 +691,6 @@
         }
       });
     });
-
-
     </script>
   </body>
 </html>
