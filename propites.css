@@ -660,9 +660,64 @@ body.menu-open {
 
 /* -----------property-about-detail-info----------------------- */
 
-/* .property-about-detail-info {
+.property-about-detail-info {
   padding-top: 75px;
-} */
+}
+/* Sidebar Styles */
+.mobile-filter-btn {
+  display: none;
+  /* position: fixed; */
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  background: #543ad7;
+  color: white;
+  border: none;
+  padding: 8px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(84, 58, 215, 0.3);
+  transition: all 0.2s;
+  margin-left: 20px;
+}
+.mobile-filter-btn:hover {
+  background: #5856eb;
+  transform: translateY(-1px);
+}
+/* Mobile Overlay */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Mobile Close Button */
+.mobile-close-btn {
+  display: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.mobile-close-btn:hover {
+  background: #f3f4f6;
+}
 /* Sidebar Styles */
 .property-sidebar {
   width: 300px;
@@ -1338,26 +1393,13 @@ body.menu-open {
   .floating-range-hero {
     max-width: 580px;
   }
-  /* .nav-btn,
-  .nav-item {
-    display: none;
-    flex-basis: 100%;
-    flex-direction: column;
-  } */
+
   .hamberger {
     display: block;
   }
   .fa-solid {
     font-size: 1rem;
   }
-  /* #hamberger:checked ~ .nav-item,
-  #hamberger:checked ~ .nav-btn {
-    display: flex !important;
-  }
-  .nav-item > ul,
-  .nav-btn {
-    flex-direction: column;
-  } */
 
   header {
     position: relative;
@@ -1873,6 +1915,42 @@ body.menu-open {
 
   .price-values {
     gap: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .mobile-filter-btn {
+    display: flex;
+  }
+
+  .mobile-overlay.show {
+    display: block;
+  }
+
+  .mobile-close-btn {
+    display: block;
+  }
+
+  .property-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 90%;
+    max-width: 350px;
+    height: 100vh;
+    z-index: 1000;
+    margin: 0;
+    border-radius: 0;
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+  }
+
+  .property-sidebar.mobile-open {
+    left: 0;
+  }
+
+  .property-about-detail-info {
+    margin-top: -45px;
   }
 }
 

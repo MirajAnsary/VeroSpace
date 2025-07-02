@@ -453,21 +453,6 @@ body {
 }
 /* card- */
 
-/* .filter-box {
-  background: white;
-  margin: 0 auto;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 880px;
-  width: 100%;
-  position: relative;
-  top: -50px; */
-/* left: 270px; */
 .cards-section {
   /* padding-top: 200px; */
   padding: 20px;

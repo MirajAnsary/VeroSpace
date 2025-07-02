@@ -256,9 +256,22 @@
     <!-- ------------property-about-detail-info------------------------------- -->
 
     <section class="property-about-detail-info">
+      <!-- filter -->
+       <div class="property-listing-container">
+        <!-- Mobile Filter Button -->
+        <button class="mobile-filter-btn" id="mobileFilterBtn">
+<i class="fa-regular fa-pen-to-square"></i>               
+ Apply Now
+        </button>
+      </div>
+      <!-- Mobile Overlay -->
+      <div class="mobile-overlay" id="mobileOverlay"></div>
+      <!-- /// -->
       <div class="container">
         <div class="row">
           <aside class="property-sidebar">
+              <button class="mobile-close-btn" id="mobileCloseBtn">&times;</button>
+
             <form id="propertyFilterForm">
               <div class="property-filter-group">
                 <label for="propertyCountry" class="property-filter-label"
@@ -939,6 +952,8 @@
     <script src="./ranges.js"></script>
     <script src="./script.js"></script>
     <script src="./page function.js"></script>
+    <script src="./property info.js"></script>
+    <script src="remove .js"></script>
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>

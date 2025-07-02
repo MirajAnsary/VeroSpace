@@ -416,19 +416,7 @@ header > div > div > div {
   font-family: Montserrat, sans-serif;
   line-height: 66px;
 }
-/* .hero-section span {
-  max-width: 657px;
-  min-height: 70px;
-  background-color: #543ad7;
-  border-radius: 10px;
-  padding-inline: 10px;
-}
-.hero-section p {
-  color: white;
-  font-size: 20px;
-  margin-top: 25px;
-  margin-bottom: 185px;
-} */
+
 .fa-arrow-right {
   color: white;
   font-size: 1rem;
@@ -1394,15 +1382,6 @@ textarea {
     height: 280px;
   }
 
-  /* .professional-card {
-    display: none;
-  }
-
-  .professional-xperts {
-    margin-inline: 0;
-    border-radius: 0;
-  } */
-
   .form-container {
     padding: 30px 25px;
   }
@@ -1412,36 +1391,6 @@ textarea {
     gap: 25px;
     margin-bottom: 25px;
   }
-
-  /* label {
-    font-size: 16px;
-    margin-bottom: 10px;
-  } */
-
-  /* input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
-    padding: 14px 16px;
-    font-size: 16px;
-  } */
-
-  /* .faq-container {
-    padding: 30px 20px;
-  }
-
-  .faq-title {
-    font-size: 28px;
-  }
-
-  .faq-question-text {
-    font-size: 16px;
-    margin-right: 15px;
-  }
-
-  .faq-answer-text {
-    font-size: 15px;
-  } */
 
   /* ---------------------------- */
 
@@ -1582,14 +1531,6 @@ textarea {
     justify-content: center;
     font-size: 10px;
   }
-  /* .vission-mission {
-    flex-direction: column;
-    gap: 17px;
-  } */
-  /* .professional-xperts {
-    margin-inline: 0;
-    border-radius: 0;
-  } */
 
   /* -------------------------------- */
 
@@ -2001,30 +1942,6 @@ body.menu-open {
     margin-left: 16px;
     font-size: 12px;
   }
-  /* .profile-card {
-    width: 240px;
-    height: 310px;
-  }
-
-  .profile-image {
-    height: 240px;
-  }
-
-  .profile-info {
-    padding: 15px;
-  } */
-
-  /* .contact-icon {
-    width: 35px;
-    height: 35px;
-    bottom: 15px;
-    right: 15px;
-  }
-
-  .contact-icon img {
-    width: 18px;
-    height: 18px;
-  } */
 
   .form-container {
     padding: 20px 15px;
@@ -2034,51 +1951,6 @@ body.menu-open {
     gap: 15px;
     margin-bottom: 18px;
   }
-
-  /* label {
-    font-size: 14px;
-    margin-bottom: 6px;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
-    padding: 10px 12px;
-    font-size: 14px;
-  }
-
-  textarea {
-    min-height: 90px;
-  } */
-
-  /* .submit-btn {
-    padding: 12px 30px;
-    font-size: 14px;
-    margin-top: 20px;
-    min-width: 120px;
-  } */
-
-  /* .faq-container {
-    padding: 20px 12px;
-  }
-
-  .faq-title {
-    font-size: 22px;
-  }
-
-  .faq-question {
-    padding: 18px 0;
-  }
-
-  .faq-question-text {
-    font-size: 14px;
-    margin-right: 10px;
-  }
-
-  .faq-answer-text {
-    font-size: 13px;
-  } */
 
   .left-section,
   .right-section {

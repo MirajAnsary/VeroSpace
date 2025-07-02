@@ -1532,30 +1532,6 @@ body.menu-open {
     margin-left: 16px;
     font-size: 12px;
   }
-  /* .profile-card {
-    width: 240px;
-    height: 310px;
-  }
-
-  .profile-image {
-    height: 240px;
-  }
-
-  .profile-info {
-    padding: 15px;
-  } */
-
-  /* .contact-icon {
-    width: 35px;
-    height: 35px;
-    bottom: 15px;
-    right: 15px;
-  }
-
-  .contact-icon img {
-    width: 18px;
-    height: 18px;
-  } */
 
   .form-container {
     padding: 20px 15px;
@@ -1565,51 +1541,6 @@ body.menu-open {
     gap: 15px;
     margin-bottom: 18px;
   }
-
-  /* label {
-    font-size: 14px;
-    margin-bottom: 6px;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
-    padding: 10px 12px;
-    font-size: 14px;
-  }
-
-  textarea {
-    min-height: 90px;
-  } */
-
-  /* .submit-btn {
-    padding: 12px 30px;
-    font-size: 14px;
-    margin-top: 20px;
-    min-width: 120px;
-  } */
-
-  /* .faq-container {
-    padding: 20px 12px;
-  }
-
-  .faq-title {
-    font-size: 22px;
-  }
-
-  .faq-question {
-    padding: 18px 0;
-  }
-
-  .faq-question-text {
-    font-size: 14px;
-    margin-right: 10px;
-  }
-
-  .faq-answer-text {
-    font-size: 13px;
-  } */
 
   .left-section,
   .right-section {
