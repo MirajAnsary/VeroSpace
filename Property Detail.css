@@ -1943,6 +1943,11 @@ body.menu-open {
     padding-top: 160px;
   }
 }
+@media screen and (max-width: 360px) {
+  .footer {
+    padding: 0 21px;
+  }
+}
 
 /* ------------------------------------------------ */
 @media screen and (max-width: 320px) {

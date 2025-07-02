@@ -1772,6 +1772,9 @@ input:focus {
   .hero-section > h1 {
     padding-top: 125px;
   }
+  .footer {
+    padding: 0 21px;
+  }
 }
 /* ------------------------------------------------ */
 @media screen and (max-width: 320px) {
