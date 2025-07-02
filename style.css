@@ -453,7 +453,7 @@ body {
 }
 /* card- */
 
-.filter-box {
+/* .filter-box {
   background: white;
   margin: 0 auto;
   padding: 25px;
@@ -466,8 +466,29 @@ body {
   max-width: 880px;
   width: 100%;
   position: relative;
-  top: -50px;
-  /* left: 270px; */
+  top: -50px; */
+/* left: 270px; */
+.cards-section {
+  /* padding-top: 200px; */
+  padding: 20px;
+}
+
+.filter-box {
+  background: white;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  top: -110px;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
 }
 
 .field {
@@ -477,6 +498,7 @@ body {
   border-radius: 30px;
   padding: 10px 25px 8px 25px;
   gap: 8px;
+  min-width: 120px;
 }
 
 .field select,
@@ -485,6 +507,8 @@ body {
   border: none;
   outline: none;
   font-size: 14px;
+  width: 100%;
+  min-width: 100px;
 }
 
 .field input {
@@ -501,66 +525,114 @@ body {
 .price-group label {
   font-size: 13px;
   color: #333;
+  font-weight: 500;
 }
 
+/* New Dual Range Slider Styles */
 .slider-wrapper {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 10px;
-}
-
-.slider {
-  position: relative;
-  width: 220px;
-  height: 4px;
-  background: #ccc;
-  border-radius: 2px;
-}
-
-.slider input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  background: transparent;
   width: 100%;
-  position: absolute;
+  max-width: 280px;
 }
 
-.slider input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 14px;
-  height: 14px;
-  background: #6a0dad;
+.price-range {
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.range-slider {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+}
+
+.range-track {
+  position: absolute;
+  height: 6px;
+  background: linear-gradient(90deg, #543ad7, #7c3aed);
+  border-radius: 3px;
+  left: 20%;
+  right: 10%;
+}
+
+.range-thumb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #4c63d2;
+  border: 3px solid white;
   border-radius: 50%;
   cursor: pointer;
-  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(76, 99, 210, 0.3);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
 }
 
-.range-labels {
+.range-thumb:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(76, 99, 210, 0.4);
+}
+
+.range-thumb.left {
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.range-thumb.right {
+  right: 10%;
+  transform: translate(50%, -50%);
+}
+
+.range-thumb.left:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.range-thumb.right:hover {
+  transform: translate(50%, -50%) scale(1.1);
+}
+
+.price-values {
   display: flex;
   justify-content: space-between;
-  width: 220px;
-  font-size: 12px;
-  margin-top: 5px;
+  width: 100%;
 }
 
-.price-label {
-  background: #6a0dad;
+.price-value {
+  background: #4c63d2;
   color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
   font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 12px;
+  font-weight: 600;
 }
 
 .search-btn {
   background: #6a0dad;
   color: white;
   font-weight: bold;
-  padding: 10px 25px;
+  padding: 12px 30px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
   font-size: 14px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
+
+.search-btn:hover {
+  background: #5a0b9a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(106, 13, 173, 0.3);
+}
+
 .house-rent,
 .rent-price,
 .location-price {
@@ -569,12 +641,17 @@ body {
   gap: 20px;
   align-items: center;
 }
+
 .location-price {
-  gap: 47px !important;
+  gap: 20px !important;
+  flex: 1;
+  min-width: 250px;
 }
+
 .vertical-line {
   min-height: 100px;
-  border: 2px solid #f4f4f4;
+  border: 1px solid #f4f4f4;
+  display: block;
 }
 /* ==========================================================================
                                         Apartment Section
@@ -1468,178 +1545,155 @@ body.menu-open {
   }
 }
 
-/* @media (max-width: 1165px) {
-  .filter-box {
-    left: 162px;
-  }
-} */
-/* @media (max-width: 1090px) {
-  .filter-box {
-    left: 122px;
-  }
-} */
-@media (max-width: 1080px) {
-  .filter-box {
-    /* flex-direction: column;
-    align-items: stretch; */
-    max-width: 756px;
-  }
-  .field input {
-    width: 100%;
-  }
-
-  .slider-wrapper,
-  .range-labels {
-    width: 100%;
-  }
-}
-@media (max-width: 1090px) {
-  .filter-box {
-    /* left: 90px; */
-    max-width: 716px;
-  }
-}
-/* @media (max-width: 838px) {
-  .filter-box {
-    left: 64px;
-  }
-} */
-@media (max-width: 800px) {
-  .filter-box {
-    max-width: 679px;
-  }
-}
-/* @media (max-width: 754px) {
-  .filter-box {
-    left: 41px;
-  }
-} */
-@media (max-width: 737px) {
-  .filter-box {
-    max-width: 638px;
-    /* left: 48px; */
-  }
-}
-@media (max-width: 700px) {
-  .filter-box {
-    max-width: 611px;
-    /* top: 512px; */
-  }
-}
-/* @media (max-width: 688px) {
-  .filter-box {
-    top: 433px;
-    left: 41px;
-  }
-} */
-@media (max-width: 671px) {
-  .filter-box {
-    max-width: 579px;
-  }
-}
-@media (max-width: 638px) {
-  .filter-box {
-    max-width: 544px;
-  }
-}
-@media (max-width: 609px) {
-  .field {
-    padding: 8px 15px 6px 15px;
-  }
-  .slider-wrapper,
-  .range-labels {
-    width: 60%;
-  }
-}
-
-@media (max-width: 590px) {
-  .filter-box {
-    max-width: 524px;
-    /* left: 34px; */
-  }
-}
-@media (max-width: 565px) {
-  .filter-box {
-    max-width: 481px;
-    /* left: 44px; */
-  }
-}
-
-@media (max-width: 527px) {
-  .filter-box {
-    max-width: 392px;
-    /* left: 67px; */
-  }
-}
-
-@media (max-width: 481px) {
-  .house-rent,
-  .rent-price,
-  .location-price {
-    display: flex;
-    gap: 20px;
-    align-items: start;
-  }
-
-  .search-btn {
-    padding: 9px 13px;
-    border-radius: 20px;
-    font-size: 10px;
-  }
-  price-label {
-    font-size: 9px;
-    padding: 3px 7px;
-  }
-  .field select,
-  .field input {
-    font-size: 9px;
-  }
-}
-@media (max-width: 453px) {
-  .filter-box {
-    max-width: 304px;
-  }
-  .location-price {
-    max-width: 250px;
-  }
-}
-@media (max-width: 375px) {
-  .price-label {
-    font-size: 8px;
-    padding: 3px 10px;
-    border-radius: 10px;
-  }
-  .location-price {
-    gap: 10px !important;
-  }
-  .search-btn {
-    padding: 7px 9px;
-    border-radius: 10px;
-    font-size: 8px;
-  }
-  .field {
-    padding: 6px 13px 6px 13px;
-  }
-  .filter-box {
-    max-width: 304px;
-  }
-}
 @media (max-width: 375px) {
   .filter-box {
-    max-width: 267px;
+    top: 90%;
   }
 
   .banner-section .fluid-container .container-wrapper {
     height: 536px;
   }
-}
-@media (max-width: 320px) {
-  .filter-box {
-    max-width: 251px;
+  .cards-section {
+    padding-top: 10px !important;
   }
+}
+
+@media (max-width: 320px) {
   .bannner-container {
     min-height: 482px;
   }
+}
+@media (max-width: 1024px) {
+  .filter-box {
+    max-width: 100%;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .location-price {
+    min-width: 200px;
+  }
+
+  .slider-wrapper {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-section {
+    padding-top: 100px;
+  }
+
+  .filter-box {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .house-rent,
+  .rent-price,
+  .location-price {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .house-rent {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .rent-price {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .location-price {
+    gap: 15px !important;
+    min-width: unset;
+  }
+
+  .slider-wrapper {
+    max-width: 100%;
+  }
+
+  .field {
+    flex: 1;
+    min-width: unset;
+  }
+
+  .field input {
+    width: 100%;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .search-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .price-group {
+    align-items: center;
+  }
+
+  .price-values {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-box {
+    padding: 12px;
+  }
+
+  .house-rent {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .rent-price {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .field {
+    padding: 12px 20px;
+  }
+
+  .price-values {
+    gap: 10px;
+    justify-content: center;
+  }
+  .field select,
+  .field input {
+    min-width: 242px;
+  }
+}
+
+/* Interactive drag functionality */
+.range-thumb {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.range-thumb.dragging {
+  transform: translateY(-50%) scale(1.2);
+  box-shadow: 0 6px 16px rgba(76, 99, 210, 0.5);
+}
+
+.range-thumb.left.dragging {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.range-thumb.right.dragging {
+  transform: translate(50%, -50%) scale(1.2);
 }
 /* ==========================================================================
                                         Apartment Section responsive

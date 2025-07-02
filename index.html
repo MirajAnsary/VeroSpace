@@ -179,10 +179,9 @@
         </div>
       </div>
     </section>
-
+ <section class="cards-section">
       <div class="filter-box" data-aos="fade-up" data-aos-duration="1000">
         <!-- Rent Dropdown -->
-
         <div class="rent-price">
           <div class="field">
             <span> <img src="./assets/dollar-sign 1.png" alt="" /></span>
@@ -202,24 +201,28 @@
             </div>
           </div>
         </div>
+
         <div class="location-price">
           <!-- Location Input -->
           <div class="field" style="flex: 1">
             <input type="text" placeholder="Your desired location goes here" />
           </div>
-          <!-- Currency -->
 
-          <!-- Price Section -->
-          <!-- <div class="price-group"> -->
+          <!-- New Dual Range Slider -->
           <div class="slider-wrapper">
-            <span class="price-label">$5,000</span>
-            <div class="slider">
-         <input type="range" min="5000" max="15000" value="5000" id="priceRange" />            </div>
-            <span class="price-label">$15,000</span>
+            <div class="price-range">
+              <div class="range-slider">
+                <div class="range-track"></div>
+                <div class="range-thumb left" data-value="5000"></div>
+                <div class="range-thumb right" data-value="15000"></div>
+              </div>
+            </div>
+            <div class="price-values">
+              <div class="price-value" id="minPrice">$ 5,000</div>
+              <div class="price-value" id="maxPrice">$ 15,000</div>
+            </div>
           </div>
         </div>
-        
-
 
         <!-- House Type -->
         <div class="house-rent">
@@ -230,7 +233,6 @@
               <option>Flat</option>
             </select>
           </div>
-
           <!-- Rooms -->
           <div class="field">
             <span><img src="./assets/ic_round-meeting-room.png" alt="" /></span>
@@ -241,10 +243,12 @@
             </select>
           </div>
         </div>
+
         <div class="vertical-line"></div>
         <!-- Search Button -->
         <button class="search-btn">SEARCH</button>
       </div>
+    </section>
 
     <!-- ==========================================================================
     Apartment Section
@@ -828,6 +832,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
     <script src="./counting.js"></script>
+    <script src="./ranges.js"></script>
      <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
