@@ -1337,111 +1337,56 @@ body {
 /* =====footer-section =====*/
 
 .footer {
-  display: flex;
-  flex-wrap: wrap;
+  padding-block: 33px;
+}
+.footer > div > div {
   justify-content: space-between;
-  padding: 60px 30px;
-  border-top: 1px solid #444;
-  gap: 30px;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.footer-column {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-logo {
-  display: flex;
   align-items: center;
-  gap: 10px;
+}
+.footer-content > p {
+  max-width: 435px;
+  color: #868686;
+  margin-top: 26px;
+  font-size: 20px;
+}
+.footer-social-link {
+  margin-top: 27px;
+  display: flex;
+  gap: 23px;
+}
+.footer-link > h3,
+.footer-property > h3 {
   font-size: 24px;
-  font-weight: bold;
-  color: #6a5acd;
+  font-weight: 600;
+  font-family: Montserrat, sans-serif;
+  color: #333333;
+  margin-bottom: 21px;
 }
-
-.footer-description {
-  margin: 20px 0;
-  color: #868686;
-  font-size: 15px;
-}
-
-.social-images a {
-  margin-right: 10px;
-  display: inline-block;
-}
-
-.social-images img {
-  width: 36px;
-  height: 36px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.footer-links h3 {
-  color: #868686;
+.links a {
+  color: #868686 !important;
   font-size: 18px;
-  margin-bottom: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
 }
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.links a:hover {
+  color: #543ad7 !important;
 }
-
-.footer-links ul li {
-  margin-bottom: 10px;
+/* copy right */
+.copyright {
+  padding-block: 23px;
 }
-
-.footer-links ul li a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-links ul li a:hover {
-  color: #6a5acd;
-}
-
-.footer-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-
-.footer-gallery img {
-  width: 100%;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* Second Footer */
-.second-footer {
-  background-color: #f8f8f8;
-  padding-block: 20px;
-  color: #666;
-}
-
-.footer-content {
-  margin: 0 auto;
-  display: flex;
+.copyright > div > div {
   justify-content: space-between;
   align-items: center;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  color: #666666;
 }
-
-.second-footer-links {
+.copy-right {
   display: flex;
   gap: 27px;
 }
-
-.second-footer-links a {
-  color: #666;
-  font-weight: 500;
-}
-
 /* =================Navbar responsive==================== */
 
 @media screen and (max-width: 905px) {
