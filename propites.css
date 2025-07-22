@@ -2005,3 +2005,10 @@ body.menu-open {
     min-width: 200px;
   }
 }
+@media (max-width: 360px) {
+  .navbar-container {
+    min-height: 60px;
+    max-width: 344px;
+    margin: 0 auto;
+  }
+}

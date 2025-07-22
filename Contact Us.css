@@ -1564,6 +1564,13 @@ textarea {
     transform: none;
   }
 }
+@media (max-width: 360px) {
+  .navbar-container {
+    min-height: 60px;
+    max-width: 344px;
+    margin: 0 auto;
+  }
+}
 body.menu-open {
   overflow: hidden;
 }
