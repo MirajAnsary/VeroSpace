@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- VeroSpace tab icon: house roof over a "V" in the brand purple -->
+  <rect width="64" height="64" rx="14" fill="#543ad7"/>
+  <path d="M12 30 L32 13 L52 30" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21 31 L32 52 L43 31" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
